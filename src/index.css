@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.swiper {
+  cursor: pointer;
+}
+
+.swiper:active {
+  cursor: pointer;
+}
