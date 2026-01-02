@@ -45,19 +45,19 @@ const FilterChips = ({
   if (chips.length === 0) return null;
 
   return (
-    <div className="py-2 bg-white border border-gray-400 hover:shadow-gray-500 shadow-xs rounded-xl">
+    <div className="py-1 md:py-2 bg-white border border-gray-400 hover:shadow-gray-500 shadow-xs rounded-xl">
       <div className="flex flex-wrap items-center gap-1 p-2">
         <span className="text-sm font-bold text-black">Active Filters:</span>
 
         {chips.map((chip, index) => (
           <div
             key={`${chip.type}-${chip.value}-${index}`}
-            className="flex flex-wrap items-center px-2 py-1 bg-green-600 text-gray-200 text-xs font-medium rounded-full shadow-lg hover:bg-green-800 transition-all duration-300 cursor-pointer"
+            className="flex flex-wrap gap-1 items-center px-2 py-1 bg-orange-600 text-gray-200 text-xs font-medium rounded-full shadow-lg hover:bg-orange-800 transition-all duration-300 cursor-pointer"
           >
             <span>{getChipLabel(chip.type, chip.value, currentPriceRange)}</span>
             <button
               onClick={() => handleClearFilter(chip.type, chip.value)}
-              className="hover:bg-green-800 rounded-full py-1 transition-colors focus:outline-none"
+              className="hover:bg-orange-800 rounded-full py-1 transition-colors focus:outline-none"
               aria-label={`Clear ${chip.type} filter`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

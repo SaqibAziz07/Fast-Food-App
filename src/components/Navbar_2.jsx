@@ -20,7 +20,7 @@ const Navbar_2 = () => {
     ];
 
     return (
-        <div className='max-w-[1440px] bg-[#e5bf00] py-3 lg:py-6 px-4 md:px-20 mx-auto relative'>
+        <div className='max-w-[1440px] bg-orange-600 py-3 lg:py-6 px-4 md:px-20 mx-auto relative'>
         <Swiper
             modules={[FreeMode, Mousewheel, Autoplay]}
             spaceBetween={10}

@@ -12,7 +12,7 @@ function Pricefilter({ init, price, setfun }) {
         <p className="font-semibold text-lg text-black">${init.min}</p>
         <input
           type="range"
-          className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-green-600"
+          className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
           value={init.max}
           min={price.min}
           max={price.max}
@@ -24,7 +24,7 @@ function Pricefilter({ init, price, setfun }) {
             });
           }}
         />
-        <p className="font-bold text-lg text-green-500">${init.max}</p>
+        <p className="font-bold text-lg text-orange-6black">${init.max}</p>
       </div>
     </div>
   );

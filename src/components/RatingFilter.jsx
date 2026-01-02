@@ -5,7 +5,7 @@ const RatingFilter = ({ onChangeRating, selectedRating }) => {
     <div className="p-5 space-y-3 border border-gray-800 rounded-lg bg-white">
       <h3 className="font-bold text-lg text-black">Rating</h3>
       {[5, 4, 3, 2, 1].map((rating) => (
-        <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-600 cursor-pointer transition-colors border border-transparent"
+        <div className="flex items-center justify-between p-2 rounded-lg cursor-pointer transition-colors border border-transparent"
           key={rating}
           onClick={() => onChangeRating(rating)} >
           <div className="flex items-center gap-4">

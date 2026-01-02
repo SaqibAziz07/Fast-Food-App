@@ -10,8 +10,8 @@ import Youtube from '../assets/img/yt.png'
 
 const Footer = () => {
     return (
-        <footer className='flex flex-col md:flex-row w-full px-4 md:px-10 shadow-lg border border-gray-400'>
-            <div className='flex flex-col md:flex-row items-start mt-10 gap-2 md:gap-6 md:w-3/4'>
+        <footer className='bg-white flex flex-col md:flex-row w-full px-4 md:px-10 shadow-lg border border-gray-400'>
+            <div className='flex flex-col md:flex-row items-sart mt-10 gap-2 md:gap-6 md:w-3/4'>
                 <div>
                     <img className='w-42 h-42' src={Logo} alt="Logo" />
                 </div>

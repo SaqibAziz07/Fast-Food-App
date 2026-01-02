@@ -1,7 +1,7 @@
 import Logo from '../assets/img/logo.png'
 import { CircleUserRound, MapPinned, ShoppingBag } from 'lucide-react'
 
-const Header = () => {
+const Header = ({ cartCount, onCartClick }) => {
     return (
         <header className='flex justify-between pt-2 px-4 lg:px-20 shadow-lg sticky top-0 bg-white z-50'>
             <div className='flex justify-center items-center gap-2 md:gap-4'>
@@ -14,21 +14,24 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-                {/* <input
-                    className='bg-[#FFFFFF] border border-[#8a8a8a] rounded-xl px-4 py-2 my-2  text-black placeholder-[#FFFFF] placeholder:font-semibold focus:outline-none shadow-lg active:outline-none transition-all duration-200 text-sm w-full max-w-lg'
-                    type="search"
-                    id="search"
-                    placeholder="Search for Burgers, Pizzas and many more..."
-
-                /> */}
 
             <div className='flex items-center justify-center gap-4'>
-                <span><ShoppingBag className='bg-[#FFD500] p-2 rounded-lg cursor-pointer' size={36} strokeWidth={2} color="#000000" /></span>
-                <CircleUserRound className='md:hidden' size={36} color="#000000" strokeWidth={1.5} />
-                <button className='bg-[FFFFFF] text-xs text-black font-bold px-6 py-2 rounded-md border-2 border-[#cccccc] hover:bg-[#FFD500] transition-all duration-200 cursor-pointer hidden md:block'>Sign In / Register</button>
+               <div 
+                 className='relative cursor-pointer' 
+                 onClick={onCartClick}
+               >
+                    <ShoppingBag className='bg-orange-500 p-2 rounded-lg' size={36} strokeWidth={2} color="#fff" />
+                    
+                    {cartCount > 0 && (
+                        <span className='absolute -top-2 -right-2 bg-white text-orange-500 text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-orange-600 animate-bounce-short'>
+                            {cartCount}
+                        </span>
+                    )}
+                </div>
+                <button className='bg-[FFFFFF] text-xs text-black font-bold px-6 py-2 rounded-md border-2 border-orange-400 hover:bg-orange-500 transition-all duration-200 cursor-pointer hidden md:block'>Sign In / Register</button>
             </div>
         </header>
     )
 }
 
-export default Header
+export default Header;
