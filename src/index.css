@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
 .swiper {
   cursor: pointer;
 }

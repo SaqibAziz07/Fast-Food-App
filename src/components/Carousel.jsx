@@ -9,7 +9,7 @@ import img3 from '../assets/img/carousel_1.jpg';
 
 const Carousel = () => {
     return (
-        <div className='w-full m-auto max-w-[1440px]'>
+        <div className='w-full m-auto max-w-full'>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
